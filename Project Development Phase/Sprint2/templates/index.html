@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>Prediction of Flight Delay</h1>
+<div class="content">
+    <form action="/" method="post" name="form1">
+
+        <p>Enter the Flight Number :<input type="text" name="flight_no" id="flight_no"></p>
+        <p>Month :<input type="text" name="month" id="month"></p>
+        <p>Day of Month :<input type="text" name="day_of_month" id="day_of_month"></p>
+        <p>Day of Week :<input type="text" name="day_of_week" id="day_of_week"></p>
+        <p>origin:<select id="origin" name="origin">
+            {% for i in Ori %}
+                <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+        </select></p>
+
+        <p>destination<select id="destination" name="destination">
+            {% for j in Dest %}
+                <option value="{{j}}">{{j}}</option>
+            {% endfor %}
+        </select></p>
+        <p>Scheduled Arrival Time:<input type="text" name="arrival_time" id="arrival_time"></p>
+        <p>Depature Delay:<input type="text" name="depature_delay" id="depature_delay"></p>
+        <input type="submit" value="submit">
+        <p class="output">The Flight will be on Time</p>
+
+    </form>
+</div>
+{% endblock %}
