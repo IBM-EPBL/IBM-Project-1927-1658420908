@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("../Images/bg.jpg");
+    /* opacity: 0.4; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1{
+    margin: 20px;
+    color: aliceblue;
+    text-align: center;
+}
+.content{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.output{
+    font-weight: bold;
+    color: aliceblue;
+}
